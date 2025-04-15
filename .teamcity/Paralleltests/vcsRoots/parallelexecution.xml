@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <vcs-root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="d5df5349-d68d-4e76-a733-454cbfdd04c9" type="jetbrains.git" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2025.3/project-config.xsd">
-  <name>parazllelexecution</name>
+  <name>parallelexecution</name>
   <param name="agentCleanFilesPolicy" value="ALL_UNTRACKED" />
   <param name="agentCleanPolicy" value="ON_BRANCH_CHANGE" />
   <param name="authMethod" value="PASSWORD" />

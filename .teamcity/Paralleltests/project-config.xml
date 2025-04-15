@@ -8,7 +8,7 @@
         <param name="credentialsStorageType" value="credentialsJSON" />
         <param name="enabled" value="true" />
         <param name="ignoreChangesInDependenciesAndVcsSettings" value="false" />
-        <param name="rootId" value="parazllelexecution" />
+        <param name="rootId" value="parallelexecution" />
         <param name="showChanges" value="false" />
       </parameters>
     </extension>
