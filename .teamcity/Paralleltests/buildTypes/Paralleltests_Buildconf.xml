@@ -6,6 +6,13 @@
     <vcs-settings>
       <vcs-entry-ref root-id="parallelexecution" />
     </vcs-settings>
+    <build-extensions>
+      <extension id="parallelTests" type="parallelTests">
+        <parameters>
+          <param name="numberOfBatches" value="2" />
+        </parameters>
+      </extension>
+    </build-extensions>
   </settings>
 </build-type>
 
