@@ -3,6 +3,41 @@
   <name>Build</name>
   <description />
   <settings>
+    <build-runners>
+      <runner id="dotnet" name="" type="dotnet">
+        <parameters>
+          <param name="command" value="build" />
+          <param name="paths" value="ParallelTests.sln" />
+          <param name="required.sdk" value="8" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
+      <runner id="dotnet_1" name="" type="dotnet">
+        <parameters>
+          <param name="command" value="test" />
+          <param name="paths" value="ParallelTests.sln" />
+          <param name="required.sdk" value="8" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
+      <runner id="dotnet_2" name="" type="dotnet">
+        <parameters>
+          <param name="command" value="test" />
+          <param name="paths" value="ParallelTests/ParallelTests.csproj" />
+          <param name="required.sdk" value="8" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
+      <runner id="jb_nuget_installer" name="" type="jb.nuget.installer">
+        <parameters>
+          <param name="nuget.path" value="%teamcity.tool.NuGet.CommandLine.DEFAULT%" />
+          <param name="nuget.updatePackages.mode" value="sln" />
+          <param name="nuget.use.restore" value="restore" />
+          <param name="sln.path" value="ParallelTests.sln" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
+    </build-runners>
     <vcs-settings>
       <vcs-entry-ref root-id="Paralleltests_HttpsGithubComMarimargaryan86parallelTestsGitRefsHeadsMain" />
     </vcs-settings>
