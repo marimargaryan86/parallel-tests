@@ -3,6 +3,9 @@
   <name>Build</name>
   <description />
   <settings>
+    <disabled-settings>
+      <setting-ref ref="dotnet_2" />
+    </disabled-settings>
     <build-runners>
       <runner id="dotnet" name="" type="dotnet">
         <parameters>
