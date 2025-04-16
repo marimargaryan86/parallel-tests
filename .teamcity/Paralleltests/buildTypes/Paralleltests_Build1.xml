@@ -20,14 +20,6 @@
           <param name="teamcity.step.mode" value="default" />
         </parameters>
       </runner>
-      <runner id="dotnet_2" name="" type="dotnet">
-        <parameters>
-          <param name="command" value="test" />
-          <param name="paths" value="ParallelTests/ParallelTests.csproj" />
-          <param name="required.sdk" value="8" />
-          <param name="teamcity.step.mode" value="default" />
-        </parameters>
-      </runner>
     </build-runners>
     <vcs-settings>
       <vcs-entry-ref root-id="Paralleltests_HttpsGithubComMarimargaryan86parallelTestsGitRefsHeadsMain1" />
