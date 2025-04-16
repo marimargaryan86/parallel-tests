@@ -3,6 +3,15 @@
   <name>buildconf</name>
   <description />
   <settings>
+    <build-runners>
+      <runner id="dotnet" name="" type="dotnet">
+        <parameters>
+          <param name="command" value="build" />
+          <param name="dotNetCoverage.dotCover.home.path" value="%teamcity.tool.JetBrains.dotCover.CommandLineTools.DEFAULT%" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
+    </build-runners>
     <vcs-settings>
       <vcs-entry-ref root-id="parallelexecution" />
     </vcs-settings>
