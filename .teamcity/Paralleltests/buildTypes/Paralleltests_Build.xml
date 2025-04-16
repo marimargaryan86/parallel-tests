@@ -42,11 +42,6 @@
       </build-trigger>
     </build-triggers>
     <build-extensions>
-      <extension id="perfmon" type="perfmon">
-        <parameters>
-          <param name="teamcity.perfmon.feature.enabled" value="true" />
-        </parameters>
-      </extension>
       <extension id="parallelTests" type="parallelTests">
         <parameters>
           <param name="numberOfBatches" value="2" />
