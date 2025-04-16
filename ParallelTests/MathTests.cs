@@ -19,3 +19,23 @@ public class Tests
         Assert.AreEqual(9, 3 * 3);
     }
 }
+
+public class Testsik
+{
+    [SetUp]
+    public void Setup()
+    {
+    }
+
+    [Test]
+    public void SumTestik()
+    {
+        Assert.AreEqual(6, 3 + 3);
+    }
+    
+    [Test]
+    public void MultiplyTestik()
+    {
+        Assert.AreEqual(9, 3 * 3);
+    }
+}
