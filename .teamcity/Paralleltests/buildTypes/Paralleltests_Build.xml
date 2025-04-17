@@ -3,6 +3,9 @@
   <name>Build</name>
   <description />
   <settings>
+    <options>
+      <option name="artifactRules" value="my-filename-* =&gt; artifacts/" />
+    </options>
     <disabled-settings>
       <setting-ref ref="dotnet_2" />
     </disabled-settings>
