@@ -38,6 +38,8 @@ project {
 object Build : BuildType({
     name = "Build"
 
+    artifactRules = "json%build.counter%"
+
     vcs {
         root(HttpsGithubComMarimargaryan86parallelTestsGitRefsHeadsMain)
     }
