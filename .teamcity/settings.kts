@@ -1,5 +1,6 @@
 import jetbrains.buildServer.configs.kotlin.*
 import jetbrains.buildServer.configs.kotlin.buildFeatures.perfmon
+import jetbrains.buildServer.configs.kotlin.buildSteps.script
 import jetbrains.buildServer.configs.kotlin.triggers.vcs
 import jetbrains.buildServer.configs.kotlin.vcs.GitVcsRoot
 
@@ -39,6 +40,17 @@ object Build : BuildType({
 
     vcs {
         root(HttpsGithubComMarimargaryan86parallelTestsGitRefsHeadsMain)
+    }
+
+    steps {
+        script {
+            name = "parallel"
+            id = "parallel"
+            scriptContent = """
+                # This step runs unit tests in parallel
+                dotnet test -- NUnit.NumberOfTestWorkers=4
+            """.trimIndent()
+        }
     }
 
     triggers {
