@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="d7749d85-beb5-4e9e-a614-5fc9c8e83674" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2025.3/project-config.xsd">
+  <name>Build</name>
+  <description />
+  <settings>
+    <options>
+      <option name="artifactRules" value="my-filename%build.counter%" />
+    </options>
+    <disabled-settings>
+      <setting-ref ref="dotnet_2" />
+    </disabled-settings>
+    <build-runners>
+      <runner id="dotnet" name="" type="dotnet">
+        <parameters>
+          <param name="command" value="build" />
+          <param name="paths" value="ParallelTests.sln" />
+          <param name="required.sdk" value="8" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
+      <runner id="dotnet_1" name="" type="dotnet">
+        <parameters>
+          <param name="command" value="test" />
+          <param name="paths" value="ParallelTests.sln" />
+          <param name="required.sdk" value="8" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
+      <runner id="dotnet_2" name="" type="dotnet">
+        <parameters>
+          <param name="command" value="test" />
+          <param name="paths" value="ParallelTests/ParallelTests.csproj" />
+          <param name="required.sdk" value="8" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings>
+      <vcs-entry-ref root-id="Paralleltests_HttpsGithubComMarimargaryan86parallelTestsGitRefsHeadsMain2" />
+    </vcs-settings>
+    <build-triggers>
+      <build-trigger id="TRIGGER_4" type="vcsTrigger">
+        <parameters>
+          <param name="branchFilter" value="+:*" />
+          <param name="enableQueueOptimization" value="true" />
+          <param name="quietPeriodMode" value="DO_NOT_USE" />
+        </parameters>
+      </build-trigger>
+    </build-triggers>
+    <build-extensions>
+      <extension id="parallelTests" type="parallelTests">
+        <parameters>
+          <param name="numberOfBatches" value="2" />
+          <param name="separateArtifacts" value="true" />
+        </parameters>
+      </extension>
+    </build-extensions>
+  </settings>
+</build-type>
+
