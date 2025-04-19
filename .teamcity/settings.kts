@@ -37,7 +37,7 @@ project {
 object Build : BuildType({
     name = "Build"
 
-    artifactRules = "json%build.counter%"
+    artifactRules = "*/my-filename-*.txt => artifacts/"
 
     vcs {
         root(HttpsGithubComMarimargaryan86parallelTestsGitRefsHeadsMain)
