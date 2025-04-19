@@ -7,6 +7,7 @@
       <option name="artifactRules" value="%build.counter%" />
     </options>
     <disabled-settings>
+      <setting-ref ref="dotnet" />
       <setting-ref ref="dotnet_2" />
     </disabled-settings>
     <build-runners>
