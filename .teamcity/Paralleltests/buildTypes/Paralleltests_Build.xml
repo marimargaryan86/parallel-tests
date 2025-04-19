@@ -50,7 +50,7 @@
     <build-extensions>
       <extension id="parallelTests" type="parallelTests">
         <parameters>
-          <param name="numberOfBatches" value="2" />
+          <param name="numberOfBatches" value="3" />
           <param name="separateArtifacts" value="true" />
         </parameters>
       </extension>
