@@ -4,7 +4,7 @@
   <description />
   <settings>
     <options>
-      <option name="artifactRules" value="%build.number%" />
+      <option name="artifactRules" value="%build.counter%" />
     </options>
     <disabled-settings>
       <setting-ref ref="dotnet_2" />
