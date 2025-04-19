@@ -4,7 +4,7 @@
   <description />
   <settings>
     <options>
-      <option name="artifactRules" value="%build.counter%" />
+      <option name="artifactRules" value="**/my-filename-*.txt =&gt; artifacts/" />
     </options>
     <disabled-settings>
       <setting-ref ref="dotnet" />
