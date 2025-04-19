@@ -37,7 +37,7 @@ project {
 object Build : BuildType({
     name = "Build"
 
-    artifactRules = "*/my-filename-*.txt => artifacts/"
+    artifactRules = "global.json"
 
     vcs {
         root(HttpsGithubComMarimargaryan86parallelTestsGitRefsHeadsMain)
