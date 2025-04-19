@@ -37,6 +37,8 @@ project {
 object Build : BuildType({
     name = "Build"
 
+    artifactRules = ".teamcity/Paralleltests/buildTypes => .teamcity/Paralleltests/buildTypes"
+
     vcs {
         root(HttpsGithubComMarimargaryan86parallelTestsGitRefsHeadsMain)
     }
