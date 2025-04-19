@@ -1,4 +1,5 @@
 import jetbrains.buildServer.configs.kotlin.*
+import jetbrains.buildServer.configs.kotlin.buildSteps.dotnetTest
 import jetbrains.buildServer.configs.kotlin.triggers.vcs
 import jetbrains.buildServer.configs.kotlin.vcs.GitVcsRoot
 
@@ -40,6 +41,14 @@ object Build : BuildType({
 
     vcs {
         root(HttpsGithubComMarimargaryan86parallelTestsGitRefsHeadsMain)
+    }
+
+    steps {
+        dotnetTest {
+            id = "dotnet"
+            projects = "ParallelTests.sln"
+            sdk = "8"
+        }
     }
 
     triggers {
