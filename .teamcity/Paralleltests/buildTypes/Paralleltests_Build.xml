@@ -9,7 +9,6 @@
     <disabled-settings>
       <setting-ref ref="dotnet" />
       <setting-ref ref="dotnet_2" />
-      <setting-ref ref="parallelTests" />
     </disabled-settings>
     <build-runners>
       <runner id="dotnet" name="" type="dotnet">
