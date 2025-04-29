@@ -4,7 +4,7 @@
   <description />
   <settings>
     <options>
-      <option name="artifactRules" value=".teamcity =&gt; .teamcity" />
+      <option name="artifactRules" value="ParallelTests =&gt; ParallelTests" />
     </options>
     <disabled-settings>
       <setting-ref ref="dotnet" />
