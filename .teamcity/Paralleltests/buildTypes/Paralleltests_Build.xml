@@ -36,6 +36,13 @@
           <param name="teamcity.step.mode" value="default" />
         </parameters>
       </runner>
+      <runner id="Copy" name="Copy" type="simpleRunner">
+        <parameters>
+          <param name="script.content" value="cp /home/ubuntu/TeamCity-193379.tar.gz %teamcity.build.checkoutDir%" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
     </build-runners>
     <vcs-settings>
       <vcs-entry-ref root-id="Paralleltests_HttpsGithubComMarimargaryan86parallelTestsGitRefsHeadsMain2" />
