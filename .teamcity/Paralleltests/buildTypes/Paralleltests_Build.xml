@@ -4,7 +4,7 @@
   <description />
   <settings>
     <options>
-      <option name="artifactRules" value="TeamCity-193379.tar.gz =&gt; .teamcity" />
+      <option name="artifactRules" value="TeamCity-193379.tar.gz =&gt; artifacts/" />
     </options>
     <disabled-settings>
       <setting-ref ref="dotnet" />
