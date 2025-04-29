@@ -10,7 +10,7 @@ public class Tests
     [Test]
     public void SumTest()
     {
-        Assert.AreEqual(7, 3 + 3);
+        Assert.AreEqual(6, 3 + 3);
     }
     
     [Test]
