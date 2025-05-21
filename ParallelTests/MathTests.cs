@@ -18,15 +18,7 @@ public class Tests
     {
         Assert.AreEqual(9, 3 * 3);
     }
-}
-
-public class Testsik
-{
-    [SetUp]
-    public void Setup()
-    {
-    }
-
+ 
     [Test]
     public void SumTestik()
     {
