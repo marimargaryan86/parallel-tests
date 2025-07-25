@@ -18,16 +18,6 @@ public class Tests
     {
         Assert.AreEqual(9, 3 * 3);
     }
-    [Test]
-    public void MultiplyTest_01()
-    {
-        Assert.AreEqual(9, 3 * 3);
-    }
-    [Test]
-    public void MultiplyTest_01()
-    {
-        Assert.AreEqual(9, 3 * 3);
-    }
 }
 
 public class Testsik
