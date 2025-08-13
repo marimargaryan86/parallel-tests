@@ -23,8 +23,13 @@ public class Tests
     {
         Assert.AreEqual(9, 3 * 3);
     }
-     [Test]
+    [Test]
     public void MultiplyTest_Commit_2()
+    {
+        Assert.AreEqual(9, 3 * 3);
+    }
+     [Test]
+    public void MultiplyTest_Temp()
     {
         Assert.AreEqual(9, 3 * 3);
     }
