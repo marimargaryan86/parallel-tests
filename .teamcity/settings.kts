@@ -28,6 +28,7 @@ version = "2025.07"
 project {
 
     buildType(Build)
+    buildType(Uuuu)
 }
 
 object Build : BuildType({
@@ -54,4 +55,8 @@ object Build : BuildType({
             authType = vcsRoot()
         }
     }
+})
+
+object Uuuu : BuildType({
+    name = "uuuu"
 })
