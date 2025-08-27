@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="807af999-2166-42fa-a7c1-e21c4a13983a" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2025.3/project-config.xsd">
-  <name>test-xml</name>
-  <description />
-  <settings />
-</build-type>
-
