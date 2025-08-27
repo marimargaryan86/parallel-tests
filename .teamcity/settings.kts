@@ -80,6 +80,15 @@ object Build : BuildType({
             id = "cmd"
             scriptContent = "%sleep%"
         }
+        gitHubRelease {
+            name = "git_dls"
+            id = "git_dls"
+            targetVcsRootId = "ParallelTests3_7_HttpsGithubComMarimargaryan86parallelTestsRefsHeadsMain"
+            tagName = "%note_1%"
+            releaseName = "%note_1%"
+            releaseNotes = "%note_1%"
+            authType = vcsRoot()
+        }
     }
 
     features {
