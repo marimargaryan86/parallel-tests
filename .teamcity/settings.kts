@@ -47,6 +47,7 @@ object Build : BuildType({
             id = "mono"
             targetVcsRootId = "Monorepo_HttpsGithubComMarimargaryan86parallelTestsGit"
             tagName = "local"
+            releaseNotes = "%notes%"
             draft = true
             latest = true
             authType = vcsRoot()
