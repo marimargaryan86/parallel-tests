@@ -4,6 +4,7 @@
   <description />
   <settings>
     <disabled-settings>
+      <setting-ref ref="big_folder" />
       <setting-ref ref="cmd" />
     </disabled-settings>
     <parameters>
