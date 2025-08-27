@@ -49,6 +49,7 @@ object Build : BuildType({
             tagName = "loca_notes"
             releaseNotes = "%notes%"
             draft = true
+            preRelease = true
             latest = true
             authType = vcsRoot()
         }
