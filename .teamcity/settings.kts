@@ -78,6 +78,7 @@ object Build : BuildType({
         script {
             name = "cmd"
             id = "cmd"
+            enabled = false
             scriptContent = "%sleep%"
         }
         gitHubRelease {
