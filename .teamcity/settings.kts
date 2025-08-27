@@ -42,6 +42,8 @@ object Build : BuildType({
     params {
         param("sleep", "sleep 10")
         param("notes", "param_notes")
+        select("note_1", "text1",
+                options = listOf("text1", "text2"))
     }
 
     vcs {
