@@ -43,10 +43,10 @@ object Build : BuildType({
 
     steps {
         gitHubRelease {
-            name = "local"
+            name = "loca_notes"
             id = "mono"
             targetVcsRootId = "Monorepo_HttpsGithubComMarimargaryan86parallelTestsGit"
-            tagName = "local"
+            tagName = "loca_notes"
             releaseNotes = "%notes%"
             draft = true
             latest = true
