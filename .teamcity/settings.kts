@@ -59,4 +59,8 @@ object Build : BuildType({
 
 object Uuuu : BuildType({
     name = "uuuu"
+
+    vcs {
+        root(DslContext.settingsRoot)
+    }
 })
