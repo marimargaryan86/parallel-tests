@@ -82,10 +82,10 @@ object Build : BuildType({
             scriptContent = "%sleep%"
         }
         gitHubRelease {
-            name = "git_dls"
+            name = "git_personal"
             id = "git_dls"
             targetVcsRootId = "ParallelTests3_7_HttpsGithubComMarimargaryan86parallelTestsRefsHeadsMain"
-            tagName = "%note_1%"
+            tagName = "git_personal"
             releaseName = "%note_1%"
             releaseNotes = "%note_1%"
             authType = vcsRoot()
