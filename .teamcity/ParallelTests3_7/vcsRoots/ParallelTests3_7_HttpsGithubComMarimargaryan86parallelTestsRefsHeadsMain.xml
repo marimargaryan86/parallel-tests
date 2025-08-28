@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vcs-root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="26b721ec-3369-4027-b27a-ae4efcd8362e" type="jetbrains.git" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2025.3/project-config.xsd">
+  <name>https://github.com/marimargaryan86/parallel-tests#refs/heads/main</name>
+  <param name="agentCleanFilesPolicy" value="ALL_UNTRACKED" />
+  <param name="agentCleanPolicy" value="ON_BRANCH_CHANGE" />
+  <param name="authMethod" value="ACCESS_TOKEN" />
+  <param name="branch" value="refs/heads/main" />
+  <param name="ignoreKnownHosts" value="true" />
+  <param name="submoduleCheckout" value="CHECKOUT" />
+  <param name="teamcity:branchSpec" value="refs/heads/*" />
+  <param name="tokenId" value="tc_token_id:CID_e84a806a3eb7a0224d3ac8cfa43840d2:-1:3dc24070-2a73-4734-89a6-46926224719e" />
+  <param name="url" value="https://github.com/marimargaryan86/parallel-tests" />
+  <param name="useAlternates" value="AUTO" />
+  <param name="username" value="oauth2" />
+  <param name="usernameStyle" value="USERID" />
+</vcs-root>
+

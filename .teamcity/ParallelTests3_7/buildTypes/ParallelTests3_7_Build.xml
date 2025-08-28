@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2025.3/project-config.xsd">
+  <name>build</name>
+  <description />
+  <settings>
+    <disabled-settings>
+      <setting-ref ref="RQ_1" />
+      <setting-ref ref="cmd" />
+      <setting-ref ref="mono" />
+      <setting-ref ref="test" />
+    </disabled-settings>
+    <parameters>
+      <param name="note_1" value="text1" spec="select data_1='text1' data_2='text2'" />
+      <param name="notes" value="param_notes" />
+      <param name="sleep" value="sleep 10" />
+    </parameters>
+    <build-runners>
+      <runner id="mono" name="loca_notes" type="githubReleasesRunner">
+        <parameters>
+          <param name="authenticationType" value="vcsRoot" />
+          <param name="githubUrl" value="https://api.github.com" />
+          <param name="isDraft" value="true" />
+          <param name="isLatest" value="true" />
+          <param name="isPreRelease" value="true" />
+          <param name="messageFormat" value="%notes%" />
+          <param name="releaseTagName" value="loca_notes" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="vcsRootId" value="Monorepo_HttpsGithubComMarimargaryan86parallelTestsGit" />
+        </parameters>
+      </runner>
+      <runner id="test" name="test" type="DockerCommand">
+        <parameters>
+          <param name="command.args" value="--pull" />
+          <param name="docker.command.type" value="build" />
+          <param name="docker.push.remove.image" value="true" />
+          <param name="dockerImage.platform" value="linux" />
+          <param name="dockerfile.path" value="ParallelTests" />
+          <param name="dockerfile.source" value="PATH" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
+      <runner id="cmd" name="cmd" type="simpleRunner">
+        <parameters>
+          <param name="script.content" value="%sleep%" />
+          <param name="teamcity.kubernetes.executor.pull.policy" value="IfNotPresent" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+      <runner id="git_dls" name="git_personal" type="githubReleasesRunner">
+        <parameters>
+          <param name="authenticationType" value="vcsRoot" />
+          <param name="githubUrl" value="https://api.github.com" />
+          <param name="messageFormat" value="%note_1%" />
+          <param name="releaseTagName" value="git_personal" />
+          <param name="releaseTitle" value="%note_1%" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="vcsRootId" value="ParallelTests3_7_HttpsGithubComMarimargaryan86parallelTestsRefsHeadsMain" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings>
+      <vcs-entry-ref root-id="ParallelTests3_7_HttpsGithubComMarimargaryan86parallelTestsRefsHeadsMain" />
+    </vcs-settings>
+    <requirements>
+      <exists id="RQ_1" name="docker.server.osType" />
+    </requirements>
+    <build-extensions>
+      <extension id="BUILD_EXT_1" type="RunInDocker">
+        <parameters>
+          <param name="plugin.docker.imageId" value="jetbrains/tc-agent-dind-2" />
+          <param name="plugin.docker.imagePlatform" value="linux" />
+        </parameters>
+      </extension>
+    </build-extensions>
+  </settings>
+</build-type>
+
