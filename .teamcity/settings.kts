@@ -41,9 +41,9 @@ object Build : BuildType({
 
     params {
         param("sleep", "sleep 10")
-        param("notes", "param_notes")
         select("note_1", "text1",
                 options = listOf("text1", "text2"))
+        param("notes", "param_notes")
     }
 
     vcs {
@@ -94,7 +94,6 @@ object Build : BuildType({
 
     features {
         runInDocker {
-            enabled = false
             dockerImage = "jetbrains/tc-agent-dind-2"
             dockerImagePlatform = RunInDockerBuildFeature.ImagePlatform.Linux
         }
