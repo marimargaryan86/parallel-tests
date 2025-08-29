@@ -29,16 +29,6 @@ dd if=/dev/urandom of=dist/large_test_file.bin bs=1M count=150]]></param>
           <param name="use.custom.script" value="true" />
         </parameters>
       </runner>
-      <runner id="asset" name="virt2" type="githubReleasesRunner">
-        <parameters>
-          <param name="authenticationType" value="vcsRoot" />
-          <param name="githubUrl" value="https://api.github.com" />
-          <param name="isLatest" value="true" />
-          <param name="releaseTagName" value="virt3" />
-          <param name="teamcity.step.mode" value="default" />
-          <param name="vcsRootId" value="ParallelTests3_HttpsGithubComMarimargaryan86parallelTestsGitRefsHeadsMain" />
-        </parameters>
-      </runner>
       <runner id="dotnet" name="" type="dotnet">
         <parameters>
           <param name="command" value="build" />
@@ -61,6 +51,16 @@ dd if=/dev/urandom of=dist/large_test_file.bin bs=1M count=150]]></param>
           <param name="paths" value="ParallelTests/ParallelTests.csproj" />
           <param name="required.sdk" value="8" />
           <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
+      <runner id="asset" name="virt2" type="githubReleasesRunner">
+        <parameters>
+          <param name="authenticationType" value="vcsRoot" />
+          <param name="githubUrl" value="https://api.github.com" />
+          <param name="isLatest" value="true" />
+          <param name="releaseTagName" value="virt3" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="vcsRootId" value="ParallelTests3_HttpsGithubComMarimargaryan86parallelTestsGitRefsHeadsMain" />
         </parameters>
       </runner>
     </build-runners>
