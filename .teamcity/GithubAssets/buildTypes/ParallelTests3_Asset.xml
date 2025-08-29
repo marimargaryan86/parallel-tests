@@ -63,15 +63,6 @@ dd if=/dev/urandom of=dist/large_test_file.bin bs=1M count=150]]></param>
           <param name="teamcity.step.mode" value="default" />
         </parameters>
       </runner>
-      <runner id="jb_nuget_installer" name="" type="jb.nuget.installer">
-        <parameters>
-          <param name="nuget.path" value="%teamcity.tool.NuGet.CommandLine.DEFAULT%" />
-          <param name="nuget.updatePackages.mode" value="sln" />
-          <param name="nuget.use.restore" value="restore" />
-          <param name="sln.path" value="ParallelTests.sln" />
-          <param name="teamcity.step.mode" value="default" />
-        </parameters>
-      </runner>
     </build-runners>
     <vcs-settings>
       <vcs-entry-ref root-id="ParallelTests3_HttpsGithubComMarimargaryan86parallelTestsGitRefsHeadsMain" />
