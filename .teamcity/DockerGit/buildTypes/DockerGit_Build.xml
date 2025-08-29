@@ -17,7 +17,7 @@
           <param name="messageFormat" value="%notes%" />
           <param name="releaseTagName" value="loca_notes" />
           <param name="teamcity.step.mode" value="default" />
-          <param name="vcsRootId" value="Monorepo_HttpsGithubComMarimargaryan86parallelTestsGit" />
+          <param name="vcsRootId" value="DockerGit_HttpsGithubComMarimargaryan86parallelTestsRefsHeadsMain" />
         </parameters>
       </runner>
     </build-runners>
