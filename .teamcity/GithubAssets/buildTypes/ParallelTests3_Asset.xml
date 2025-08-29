@@ -46,7 +46,7 @@ dd if=/dev/urandom of=dist/large_test_file.bin bs=1M count=150]]></param>
     <build-extensions>
       <extension id="parallelTests" type="parallelTests">
         <parameters>
-          <param name="numberOfBatches" value="2" />
+          <param name="numberOfBatches" value="3" />
         </parameters>
       </extension>
     </build-extensions>
