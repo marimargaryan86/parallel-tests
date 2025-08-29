@@ -29,12 +29,12 @@ dd if=/dev/urandom of=dist/large_test_file.bin bs=1M count=150]]></param>
           <param name="use.custom.script" value="true" />
         </parameters>
       </runner>
-      <runner id="asset" name="virt" type="githubReleasesRunner">
+      <runner id="asset" name="virt2" type="githubReleasesRunner">
         <parameters>
           <param name="authenticationType" value="vcsRoot" />
           <param name="githubUrl" value="https://api.github.com" />
           <param name="isLatest" value="true" />
-          <param name="releaseTagName" value="virt" />
+          <param name="releaseTagName" value="virt2" />
           <param name="teamcity.step.mode" value="default" />
           <param name="vcsRootId" value="ParallelTests3_HttpsGithubComMarimargaryan86parallelTestsGitRefsHeadsMain" />
         </parameters>
