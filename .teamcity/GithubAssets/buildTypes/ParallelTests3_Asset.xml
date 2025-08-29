@@ -6,6 +6,7 @@
     <disabled-settings>
       <setting-ref ref="big_folder" />
       <setting-ref ref="cmd" />
+      <setting-ref ref="dotnet_1" />
     </disabled-settings>
     <parameters>
       <param name="assetspath" value="dist/large_test_file.bin" />
