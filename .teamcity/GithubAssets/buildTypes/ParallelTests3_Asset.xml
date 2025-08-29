@@ -58,7 +58,7 @@ dd if=/dev/urandom of=dist/large_test_file.bin bs=1M count=150]]></param>
           <param name="authenticationType" value="vcsRoot" />
           <param name="githubUrl" value="https://api.github.com" />
           <param name="isLatest" value="true" />
-          <param name="releaseTagName" value="virt3" />
+          <param name="releaseTagName" value="virt4" />
           <param name="teamcity.step.mode" value="default" />
           <param name="vcsRootId" value="ParallelTests3_HttpsGithubComMarimargaryan86parallelTestsGitRefsHeadsMain" />
         </parameters>
