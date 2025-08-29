@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="1085bae5-da47-4659-b25d-0fb91da68f70" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2025.3/project-config.xsd">
+  <name>asset</name>
+  <description />
+  <settings>
+    <disabled-settings>
+      <setting-ref ref="big_folder" />
+      <setting-ref ref="cmd" />
+    </disabled-settings>
+    <parameters>
+      <param name="assetspath" value="dist/large_test_file.bin" />
+    </parameters>
+    <build-runners>
+      <runner id="cmd" name="cmd" type="simpleRunner">
+        <parameters>
+          <param name="script.content"><![CDATA[mkdir -p bin/output1 bin/output2
+printf "a" > bin/output1/file1.txt
+printf "b" > bin/output2/file2.txt
+ls -R bin]]></param>
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+      <runner id="big_folder" name="big folder" type="simpleRunner">
+        <parameters>
+          <param name="script.content"><![CDATA[mkdir -p dist
+dd if=/dev/urandom of=dist/large_test_file.bin bs=1M count=150]]></param>
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+      <runner id="asset" name="personal_build_1" type="githubReleasesRunner">
+        <parameters>
+          <param name="authenticationType" value="vcsRoot" />
+          <param name="githubUrl" value="https://api.github.com" />
+          <param name="isLatest" value="true" />
+          <param name="releaseTagName" value="personal_build_1" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="vcsRootId" value="ParallelTests3_HttpsGithubComMarimargaryan86parallelTestsGitRefsHeadsMain" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings>
+      <vcs-entry-ref root-id="ParallelTests3_HttpsGithubComMarimargaryan86parallelTestsGitRefsHeadsMain" />
+    </vcs-settings>
+    <build-extensions>
+      <extension id="parallelTests" type="parallelTests">
+        <parameters>
+          <param name="numberOfBatches" value="2" />
+        </parameters>
+      </extension>
+    </build-extensions>
+  </settings>
+</build-type>
+
