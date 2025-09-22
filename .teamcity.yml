@@ -1,0 +1,17 @@
+jobs:
+  Job2:
+    name: Job 2
+    steps:
+      - type: script
+        name: sleep
+        script-content: sleep 10
+        dockerfile-source: |-
+          FROM public.ecr.aws/docker/library/ubuntu:24.04
+          RUN echo "image built" > /image-built.txt
+      - type: script
+        dockerfile-source: |-
+          FROM public.ecr.aws/docker/library/ubuntu:24.04
+          RUN echo "image built" > /image-built.txt
+        name: sleep
+        working-directory: ''
+        script-content: slepe 10
