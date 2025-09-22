@@ -9,6 +9,10 @@ jobs:
           FROM public.ecr.aws/docker/library/ubuntu:latest
           RUN echo "image built" > /image-built.txt
         dockerfile-path: ./dockerfile
+      - type: script
+        name: sleep 2
+        script-content: sleep 10
+        dockerfile-path: ./dockerfile
     parameters:
       env.img: ubuntu:letest
   Job2:
