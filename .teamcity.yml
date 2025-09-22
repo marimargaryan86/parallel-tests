@@ -30,8 +30,4 @@ jobs:
       - type: script
         name: sleep
         script-content: sleep 10
-        dockerfile-source: >-
-          docker run --rm
-          public.ecr.aws/docker/library/alpine:this-tag-does-not-exist
-
-          # expected: manifest unknown / requested image not found
+        docker-image: ubuntu:latest
