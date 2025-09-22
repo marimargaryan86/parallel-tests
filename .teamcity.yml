@@ -1,4 +1,16 @@
 jobs:
   Job1:
     name: Job 1
-    steps: []
+    steps:
+      - type: script
+        name: sleep
+        script-content: |-
+          set -e
+          [ -f /.dockerenv ] && echo "✅ IN_DOCKER"
+          cat /image-built.txt
+          cat /etc/os-release | head -1
+        dockerfile-source: |-
+          FROM public.ecr.aws/docker/library/ubuntu:24.04
+          RUN echo "image built" > /image-built.txt
+    parameters:
+      env.img: ubuntu:letest
