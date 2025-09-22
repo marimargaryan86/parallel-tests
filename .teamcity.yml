@@ -6,7 +6,7 @@ jobs:
         name: sleep
         script-content: sleep 10
         dockerfile-source: |-
-          FROM public.ecr.aws/docker/library/ubuntu:24.04
+          FROM public.ecr.aws/docker/library/ubuntu:latest
           RUN echo "image built" > /image-built.txt
     parameters:
       env.img: ubuntu:letest
