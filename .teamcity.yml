@@ -8,10 +8,3 @@ jobs:
         dockerfile-source: |-
           FROM public.ecr.aws/docker/library/ubuntu:24.04
           RUN echo "image built" > /image-built.txt
-      - type: script
-        dockerfile-source: |-
-          FROM public.ecr.aws/docker/library/ubuntu:24.04
-          RUN echo "image built" > /image-built.txt
-        name: sleep
-        working-directory: ''
-        script-content: sleep 10
