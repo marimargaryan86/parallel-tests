@@ -17,3 +17,5 @@ jobs:
       env.img: ubuntu:letest
   Job2:
     name: Job 2
+    integrations:
+      - Docker: Docker_0
