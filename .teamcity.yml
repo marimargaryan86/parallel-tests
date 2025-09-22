@@ -14,4 +14,4 @@ jobs:
           RUN echo "image built" > /image-built.txt
         name: sleep
         working-directory: ''
-        script-content: slepe 10
+        script-content: sleep 10
