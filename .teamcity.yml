@@ -19,3 +19,4 @@ jobs:
     name: Job 2
     integrations:
       - Docker: Docker_0
+      - Docker: Docker_1
