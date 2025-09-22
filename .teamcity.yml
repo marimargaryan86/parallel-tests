@@ -6,11 +6,7 @@ jobs:
         name: sleep
         script-content: sleep 10
         dockerfile-source: |-
-          # Step A (Script)
-          mkdir -p .ci
-          cat > .ci/tmp.Dockerfile <<'EOF'
           FROM public.ecr.aws/docker/library/ubuntu:24.04
-          RUN echo built > /image-built.txt
-          EOF
+          RUN echo "image built" > /image-built.txt
     parameters:
       env.img: ubuntu:letest
