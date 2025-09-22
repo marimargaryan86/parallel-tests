@@ -8,5 +8,8 @@ jobs:
         dockerfile-source: |-
           FROM public.ecr.aws/docker/library/ubuntu:latest
           RUN echo "image built" > /image-built.txt
+        dockerfile-path: ./dockerfile
     parameters:
       env.img: ubuntu:letest
+  Job2:
+    name: Job 2
