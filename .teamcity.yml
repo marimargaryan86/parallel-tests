@@ -20,3 +20,8 @@ jobs:
     integrations:
       - Docker: Docker_0
       - Docker: Docker_1
+    steps:
+      - type: script
+        name: sleep
+        script-content: sleep 10
+        dockerfile-path: ./dockerfile
