@@ -5,9 +5,6 @@ jobs:
       - type: script
         name: sleep
         script-content: sleep 10
-        dockerfile-source: |-
-          FROM public.ecr.aws/docker/library/ubuntu:lat
-          RUN echo "image built" > /image-bui
       - type: script
         name: sleep 2
         script-content: sleep 10
@@ -30,4 +27,6 @@ jobs:
       - type: script
         name: sleep
         script-content: sleep 10
-        docker-image: ubuntu:latest
+        dockerfile-source: >-
+          docker run --rm
+          public.ecr.aws/docker/library/alpine:this-tag-does-not-exist
