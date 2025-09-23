@@ -6,7 +6,3 @@ jobs:
         name: dockerfile
         script-content: sleep 10
         docker-image: alpine:latest
-      - type: script
-        name: sleep
-        script-content: sleep 10
-        docker-image: ubuntu:latest
