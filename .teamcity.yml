@@ -6,6 +6,7 @@ jobs:
         name: dockerfile
         script-content: sleep 10
         dockerfile-path: ./dockerfile
+        dockerfile-source: FROM public.ecr.aws/docker/library/ubuntu:latest
       - type: script
         name: auto
         script-content: sleep 10
