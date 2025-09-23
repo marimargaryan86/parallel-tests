@@ -6,3 +6,4 @@ jobs:
         name: sleep
         script-content: sleep 10
         dockerfile-source: erwrwer
+        dockerfile-path: ./dockerfile
