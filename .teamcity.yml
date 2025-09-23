@@ -11,22 +11,3 @@ jobs:
         dockerfile-path: ./dockerfile
     parameters:
       env.img: ubuntu:letest
-  Job2:
-    name: Job 2
-    integrations:
-      - Docker: Docker_0
-      - Docker: Docker_1
-    steps:
-      - type: script
-        name: sleep
-        script-content: sleep 10
-        dockerfile-path: ./dockerfile
-  Job3:
-    name: Job 3
-    steps:
-      - type: script
-        name: sleep
-        script-content: sleep 10
-        dockerfile-source: >-
-          docker run --rm
-          public.ecr.aws/docker/library/alpine:this-tag-does-not-exist
