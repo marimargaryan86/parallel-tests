@@ -5,11 +5,4 @@ jobs:
       - type: script
         name: sleep
         script-content: sleep 10
-        docker-image: alpine/git:latest
-      - type: script
-        dockerfile-source: |-
-          <a href=javascript:alert(1)>link</a>
-          javascript:alert(1)
-          data:text/html,<script>alert(1)</script>
-        name: sleep
-        script-content: sleep 10
+        dockerfile-path: ./dockerfile
