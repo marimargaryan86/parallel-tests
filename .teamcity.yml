@@ -3,6 +3,6 @@ jobs:
     name: Job 1
     steps:
       - type: script
-        name: sleep
+        name: dockerfile
         script-content: sleep 10
         dockerfile-path: ./dockerfile
