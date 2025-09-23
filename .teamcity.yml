@@ -6,3 +6,7 @@ jobs:
         name: dockerfile
         script-content: sleep 10
         dockerfile-path: ./dockerfile
+      - type: script
+        name: auto
+        script-content: sleep 10
+        docker-image: ubuntu:latest
