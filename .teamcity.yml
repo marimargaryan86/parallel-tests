@@ -5,7 +5,7 @@ jobs:
       - type: script
         name: dockerfile
         script-content: sleep 10
-        dockerfile-source: FROM public.ecr.aws/docker/library/ubuntu:latest
+        docker-image: alpine:latest
       - type: script
         name: sleep
         script-content: sleep 10
