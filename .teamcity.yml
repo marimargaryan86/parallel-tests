@@ -5,4 +5,4 @@ jobs:
       - type: node-js
         shell-script: npm ci
         name: Node
-        docker-image: node:latest
+        docker-image: ubuntu:latest
