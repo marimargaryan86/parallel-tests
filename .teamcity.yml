@@ -5,4 +5,4 @@ jobs:
       - type: script
         name: sleep
         script-content: sleep 10
-        docker-image: alpine:latest
+        dockerfile-source: ubuntu:latest
