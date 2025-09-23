@@ -1,4 +1,8 @@
 jobs:
   Job1:
     name: Job 1
-    steps: []
+    steps:
+      - type: script
+        name: sleep
+        script-content: sleep 10
+        dockerfile-path: ./dockerfile
