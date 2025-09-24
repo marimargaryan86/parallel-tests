@@ -3,4 +3,5 @@ jobs:
     name: Job 1
     steps: []
     integrations:
+      - Docker: Docker_7
       - Docker: Docker_5
