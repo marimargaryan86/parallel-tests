@@ -8,3 +8,4 @@ jobs:
         docker-image: alpine:latest
     integrations:
       - Docker: Docker_5
+      - Docker: Docker_6
