@@ -3,7 +3,8 @@ jobs:
     name: Job 1
     steps:
       - type: script
-        name: ''
+        name: sleep
         script-content: sleep 10
+        docker-image: ghcr.io/marimargaryan86/docker:tc3
     integrations:
       - Docker: Docker_8
