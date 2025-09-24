@@ -5,9 +5,7 @@ jobs:
       - type: script
         name: sleep
         script-content: sleep 10
-        docker-image: >-
-          javascript: "If you have Firefox, just shift-click that";
-          alert(document.domain); alert('xss')
+        docker-image: node:latest
     enable-dependency-cache: true
     integrations:
       - Docker: Docker_0
