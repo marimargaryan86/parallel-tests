@@ -1,11 +1,7 @@
 jobs:
   Job1:
     name: Job 1
-    steps:
-      - type: script
-        name: sleep
-        script-content: sleep 10
-        docker-image: ubuntu:latest
+    steps: []
     integrations:
       - Docker: Docker_7
       - Docker: Docker_5
