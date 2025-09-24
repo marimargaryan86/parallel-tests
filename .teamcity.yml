@@ -5,7 +5,7 @@ jobs:
       - type: script
         name: sleep
         script-content: sleep 10
-        docker-image: debian:latest
+        docker-image: busybox:latest
     enable-dependency-cache: true
     integrations:
       - Docker: Docker_0
