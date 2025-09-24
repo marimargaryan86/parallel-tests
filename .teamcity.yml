@@ -1,7 +1,9 @@
 jobs:
   Job1:
     name: Job 1
-    steps: []
+    steps:
+      - type: script
+        name: sleep
+        script-content: sleep
     integrations:
-      - Docker: Docker_7
       - Docker: Docker_5
