@@ -1,8 +1,7 @@
 jobs:
   Job1:
     name: Job 1
-    steps:
-      - type: node-js
-        shell-script: npm ci
-        name: Node
-        docker-image: ubuntu:latest
+    steps: []
+    enable-dependency-cache: true
+    integrations:
+      - Docker: Docker_0
