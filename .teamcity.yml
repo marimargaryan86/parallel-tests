@@ -7,5 +7,5 @@ jobs:
         script-content: sleep 10
         docker-image: node:latest
     enable-dependency-cache: true
-    integrations:
-      - Docker: Docker_0
+  Job2:
+    name: Job 2
