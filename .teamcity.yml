@@ -7,4 +7,4 @@ jobs:
         script-content: sleep 10
         docker-image: alpine:latest
     integrations:
-      - Docker: Docker_7
+      - Docker: Docker_8
