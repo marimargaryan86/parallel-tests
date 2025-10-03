@@ -1,4 +1,32 @@
 jobs:
   Job1:
     name: Job 1
-    steps: []
+    steps:
+      - type: script
+        script-content: sleep 10
+        name: sleep
+  Job2:
+    name: Job 2
+    steps:
+      - type: script
+        script-content: sleep 10
+        name: sleep
+    dependencies:
+      - Job1
+  Job3:
+    name: Job 3
+    steps:
+      - type: script
+        script-content: sleep 10
+        name: sleep
+    dependencies:
+      - Job2
+  Job4:
+    name: Job 4
+    steps:
+      - type: script
+        name: sleep
+        script-content: sleep 10
+    dependencies:
+      - Job1
+importParameters: []
